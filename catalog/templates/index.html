@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+{% block title %} <title>Biblioteca Local</title> {% endblock %}
+{% block content %}
+<h1>Biblioteca Local Home</h1>
+<p>
+  Bem-vindo a Biblioteca Local, um website desenvolvido pela
+  <em>Mozilla Developer Network</em>!
+</p>
+<h2>Conteúdo Dinamico</h2>
+<p>A biblioteca possui os seguintes registros:</p>
+<ul>
+  <li><strong>Livros:</strong> {{ num_books }}</li>
+  <li><strong>Copias:</strong> {{ num_instances }}</li>
+  <li><strong>Copias disponiveis:</strong> {{ num_instances_available }}</li>
+  <li><strong>Autores:</strong> {{ num_authors }}</li>
+  <li><strong>Generos:</strong> {{ num_genres }}</li>
+  <li><strong>Livros com a palavra 'de':</strong> {{ num_books_word_de }}</li>
+</ul>
+
+<p>Você tem um total de {{ num_visits }} visita{{ num_visits|pluralize }} a essa página.</p>
+{% endblock %}
